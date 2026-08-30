@@ -55,13 +55,15 @@ jobs:
           fi
 
           # スライド以外の資料はそのまま Markdown ページとして配信
+          # (このステップは bash -e で走るため、条件が偽でも失敗扱いに
+          #  ならないよう if 文で書く)
           for DOC in glossary.md timetable.md instructor-notes.md extra.md; do
-            [ -f "$DOC" ] && cp "$DOC" output/
+            if [ -f "$DOC" ]; then cp "$DOC" output/; fi
           done
 
-          [ -d assets ] && cp -r assets output/
-          [ -d handson ] && cp -r handson output/handson
-          [ -d docs ] && cp -r docs/. output/
+          if [ -d assets ]; then cp -r assets output/; fi
+          if [ -d handson ]; then cp -r handson output/handson; fi
+          if [ -d docs ]; then cp -r docs/. output/; fi
 
       - name: Create Jekyll config
         run: |
