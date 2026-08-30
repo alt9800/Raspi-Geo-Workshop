@@ -30,18 +30,17 @@ FOSS4G Hiroshima 2026 / 2026-08-30 14:00–17:00 / Room 610
 
 ---
 
-## 連絡系統: Slack / Communication: Slack
+## 連絡系統 / Communication
 
-- 今日の連絡・質問・リンク共有はすべて Slack で行います
-  All announcements, questions and links go through Slack today
-- 招待 QR はスクリーン上に表示します (メールでも送付済み)
-  Invitation QR is on screen (also sent by email)
-- 進行中に調べたもの・話題に出た URL は、その場で Slack に流します
-  Anything I look up during the session will be posted there in real time
-- 声を出しにくい質問も Slack に投げてください。質疑の時間に拾います
-  Questions posted on Slack will be picked up in the Q&A slot
-
-<!-- QR: Slack 招待 (当日差し込み) -->
+- 質問は**挙手**でどうぞ。手を動かす時間・休憩中は直接声をかけてください
+  Questions: raise your hand, or grab me during hands-on time and breaks
+- 進行中に調べたもの・話題に出た URL は、その場でスクリーンに表示し、
+  終了後に**公開ページに追記**します
+  Links that come up will be shown on screen and added to the public page afterwards
+- 資料はすべてここにあります / All materials live here:
+  **alt9800.github.io/Raspi-Geo-Workshop**
+- 終了後の質問は GitHub リポジトリの **Issues** へ (日英どちらでも)
+  After today, questions go to GitHub Issues (Japanese or English)
 
 ---
 
@@ -394,6 +393,7 @@ After the break, we connect to the Pis.
 サーバーの前に「PMTiles は 1 ファイルで地図になる」を体感します。
 
 1. 配布した `shelters.pmtiles` を用意
+   (公開ページ alt9800.github.io/Raspi-Geo-Workshop/shelters.pmtiles から DL)
 2. ブラウザで **pmtiles.io** を開く
 3. ファイルをドラッグ & ドロップ
 
@@ -551,7 +551,7 @@ curl http://localhost:3000/catalog | jq
 
 ## 追いつきタイム / Catch-up time
 
-ここまでで詰まっている方を優先します。挙手か Slack でどうぞ。
+ここまでで詰まっている方を優先します。挙手でどうぞ。
 
 先に進みたい方への小課題:
 
@@ -753,7 +753,7 @@ extra.md に手順、データリポジトリの `scripts/` と data-pipeline.md
 
 ## 質疑 / Q&A
 
-- 挙手でも Slack でも。Slack に溜まっている質問もここで拾います
+- 挙手でどうぞ。ハンズオン中に受けて保留にした質問もここで拾います
 - この後のクロージングでもう一度、連絡先とリポジトリを提示します
 
 ---
@@ -775,8 +775,8 @@ extra.md に手順、データリポジトリの `scripts/` と data-pipeline.md
 
 - **Pi の回収** — 席番号と照合しながら回収します。ご協力ください
 - **アンケート** — QR を表示します。運営へのフィードバックになります
-- **Slack はこのまま残ります** — 後日の質問もどうぞ
-  The Slack workspace stays open
+- **後日の質問は GitHub Issues へ** — 日英どちらでも歓迎です
+  Questions after today: GitHub Issues, Japanese or English welcome
 - **リポジトリ** — スライド・スクリプト・データ生成手順すべてここに:
 
   **github.com/alt9800/Raspi-Geo-Workshop**
