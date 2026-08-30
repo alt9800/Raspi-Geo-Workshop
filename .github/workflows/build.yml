@@ -57,7 +57,7 @@ jobs:
           # スライド以外の資料はそのまま Markdown ページとして配信
           # (このステップは bash -e で走るため、条件が偽でも失敗扱いに
           #  ならないよう if 文で書く)
-          for DOC in glossary.md timetable.md instructor-notes.md extra.md; do
+          for DOC in glossary.md timetable.md timetable.en.md instructor-notes.md instructor-notes.en.md extra.md; do
             if [ -f "$DOC" ]; then cp "$DOC" output/; fi
           done
 
@@ -156,9 +156,13 @@ jobs:
                       <h2>資料 / Materials</h2>
                       <div class="links">
                           <a href="glossary" class="sub">用語対訳表 / Glossary</a>
-                          <a href="timetable" class="sub">進行表 / Timetable</a>
-                          <a href="instructor-notes" class="sub">講師ノート / Instructor notes</a>
-                          <a href="setup-notes" class="sub">セットアップ実録 / Setup notes</a>
+                          <a href="flash-guide" class="sub">SD焼き手順 / Flash guide</a>
+                          <a href="timetable" class="sub">進行表</a>
+                          <a href="timetable.en" class="sub">Timetable (EN)</a>
+                          <a href="instructor-notes" class="sub">講師ノート</a>
+                          <a href="instructor-notes.en" class="sub">Instructor notes (EN)</a>
+                          <a href="setup-notes" class="sub">セットアップ実録</a>
+                          <a href="setup-notes.en" class="sub">Setup notes (EN)</a>
                       </div>
                   </div>
                   <div class="attrib">
