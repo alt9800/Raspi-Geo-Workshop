@@ -21,6 +21,7 @@ phones fully offline.
 | [glossary.md](glossary.md) | 用語対訳表 / JA–EN glossary |
 | [timetable.md](timetable.md) | 当日進行表 / Timetable |
 | [instructor-notes.md](instructor-notes.md) | 講師あんちょこ / Instructor notes |
+| [docs/setup-notes.md](docs/setup-notes.md) | セットアップ実録 (詰まりどころと対処) / Setup postmortem |
 
 第三部はオフラインで進行するため、参加者は開始時に公開ページから PDF を
 ダウンロードしてください。
