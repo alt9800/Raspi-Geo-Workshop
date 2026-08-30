@@ -10,17 +10,19 @@ A hands-on workshop: build a portable tile server with Martin and PMTiles on a
 Raspberry Pi 3A+, then turn the Pi into a Wi-Fi access point and serve maps to
 phones fully offline.
 
+公開ページ (HTML / PDF): https://alt9800.github.io/Raspi-Geo-Workshop/
+
 ## Contents
 
 | ファイル / File | 内容 / Description |
 |---|---|
-| [slide.md](slide.md) / [slide.pdf](slide.pdf) | スライド (日本語, Marp) / Slides (Japanese) |
+| [slide.md](slide.md) | スライド (日本語, Marp) / Slides (Japanese) |
 | [slide.en.md](slide.en.md) | スライド英語版 / English slides |
 | [glossary.md](glossary.md) | 用語対訳表 / JA–EN glossary |
 | [timetable.md](timetable.md) | 当日進行表 / Timetable |
 | [instructor-notes.md](instructor-notes.md) | 講師あんちょこ / Instructor notes |
 
-第三部はオフラインで進行するため、参加者は開始時に slide.pdf を
+第三部はオフラインで進行するため、参加者は開始時に公開ページから PDF を
 ダウンロードしてください。
 Part 3 runs offline — participants should download slide.pdf at the start.
 

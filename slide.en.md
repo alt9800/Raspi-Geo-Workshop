@@ -705,6 +705,6 @@ All reproducible at home:
   The Slack workspace stays open
 - **Repository** — slides, scripts, and data generation procedures all here:
 
-<!-- TODO: repository URL to be confirmed -->
+  **github.com/alt9800/Raspi-Geo-Workshop**
 
 Thank you — and may your maps work where the network doesn't.

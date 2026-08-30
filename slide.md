@@ -738,9 +738,9 @@ extra.md に手順、データリポジトリの `scripts/` と data-pipeline.md
 - **アンケート** — QR を表示します。運営へのフィードバックになります
 - **Slack はこのまま残ります** — 後日の質問もどうぞ
   The Slack workspace stays open
-- **リポジトリ** — スライド・スクリプト・データ生成手順すべてhere:
+- **リポジトリ** — スライド・スクリプト・データ生成手順すべてここに:
 
-<!-- TODO: リポジトリ URL 確定後に記載 -->
+  **github.com/alt9800/Raspi-Geo-Workshop**
 
 ありがとうございました。
 Thank you — and may your maps work where the network doesn't.
