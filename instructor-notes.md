@@ -3,6 +3,27 @@
 時系列の行動リスト。スライドに書いていない「講師の手」を全部ここに置く。
 公開してよい内容のみ (資格情報はここに書かない → wifi-credentials.env 参照)。
 
+## 当日朝の変更: SD 現地焼き運用
+
+事前焼きが揃わなかったため、以下に切り替え。
+
+- **今すぐ 2 セットのライターで焼き始める** (1 枚 15–20 分 + verify。
+  開場までに焼けた枚数だけ当日の負担が減る)
+- イメージはステーション用 PC 2 台にだけコピーすれば足りる
+  (USB メモリ 1 本で順にコピー。16 人への配布は不要)
+- 講義中も 2 ステーションを止めない。焼き上がりの都度、次の人を呼ぶ
+  (呼ぶ順は席番号順でよい。Slack で「次: 席 NN」と流すと声を張らずに済む)
+- ステーションに手順カードを掲示: Use custom → イメージ選択 →
+  **SKIP CUSTOMISATION** → verify 有効のまま
+- 間に合わない席は相席。焼けた時点で自分の Pi へ移動
+- 全カードはクローン → **15:15 の個体化演習 (personalize-sd.sh) が必須工程**
+  になった。ここを飛ばすと第三部で AP の SSID・チャンネルが全台衝突する
+- 確認 (焼き開始前に 1 度だけ):
+  - [ ] マスターイメージに /opt/scripts/personalize-sd.sh が入っているか。
+        無ければ nmcli / hostnamectl 直叩きの代替手順を側に用意する
+  - [ ] マスターが setup-notes 12 のチェック (AP 戻し・hazard の .bak 化・
+        autoconnect 初期値) を通した状態で吸われているか
+
 ## 開場前 (〜13:45)
 
 資材チェックリスト:
@@ -52,9 +73,9 @@
 |---|---|
 | 15:00 | pmtiles.io に shelters.pmtiles を D&D するデモ → 全員にやらせる。ファイルは Slack にも流しておく |
 | 15:05 | 席ラベルの見方を説明 → 全員で SSH。**自分の画面で 1 回通しでやって見せてから** |
-| 15:10 | 救済タイム。known_hosts 問題は docs/troubleshooting-network.md の手順へ誘導 |
-| 15:15 | `systemctl status martin`。「サービスとして動く」の意味を口頭で |
-| 15:20 | `curl /health` → `curl /catalog \| jq`。JSON の読み方 |
+| 15:10 | 救済タイム。known_hosts 問題は docs/troubleshooting-network.md へ誘導。hostname が pi-00 なのは正常と周知。未焼きの席を相席に割り振る |
+| 15:15 | 個体化演習: `sudo /opt/scripts/personalize-sd.sh NN` → reboot → 再SSH → hostname 確認。**全員の完了を確認してから先へ** (第三部の成立条件) |
+| 15:20 | `systemctl status martin` と `curl /health` → `curl /catalog \| jq` をまとめて |
 | 15:25 | /opt/tiles と config.yaml → `journalctl -u martin -f` を流しっぱなしにさせる |
 | 15:30 | ブラウザで `http://10.x.x.1NN/`。journalctl にアクセスが映るのを見せる。DevTools Network も |
 | 15:35 | click-to-inspect。属性 (名称・対応災害区分) に注目させる |

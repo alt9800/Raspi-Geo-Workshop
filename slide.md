@@ -236,6 +236,23 @@ Hardware is circulating — please have a look.
 
 ---
 
+## 今日は自分で焼きます / You flash your own card
+
+会場に**焼きステーションを 2 箇所**用意しています。
+Two flashing stations are set up in the room.
+
+- 講義と並行して順番に呼ぶので、呼ばれたら自分のカードを焼いてください
+  We'll call you up in turns during the lecture — flash your own card
+- 手順 (ステーションに掲示もあります):
+  1. Raspberry Pi Imager で「Use custom」→ マスターイメージを選択
+  2. 書き込み先 = ステーションのカードリーダーの SD
+  3. カスタマイズ画面は **SKIP CUSTOMISATION** (設定は全部イメージ内)
+  4. verify はそのまま有効で待つ (1 枚 15–20 分)
+- 焼き上がるまでは講義を聞いていて OK。**間に合わない席は隣と相席**で進め、
+  焼けた時点で自分の Pi に移ります
+
+---
+
 ## Pi への接続方法 / Ways to reach a Pi
 
 - **SSH** — 今日のメイン。ターミナルからリモートのシェルに入る
@@ -331,10 +348,10 @@ Martin を選ぶ理由:
 
 ## 休憩前の宿題 (1/2): Pi を起動する / Power up your Pi
 
-各席の Raspberry Pi 3A+ には、**焼き上げ済みの SD カード**が入っています。
-Each seat's Pi has a pre-imaged SD card ready to go.
+**焼き上がったカード**を席の Raspberry Pi 3A+ に挿して起動します。
+(まだ焼けていない席は、焼けた時点で同じ手順を踏めば追いつけます)
 
-1. 席の Pi と電源アダプタを確認 (席番号ラベル付き)
+1. 席の Pi と電源アダプタを確認 (席番号ラベル付き)。SD カードを挿す
 2. microUSB を挿して**電源投入** — 電源スイッチはありません。挿したら起動です
 3. LED の見方:
    - 赤 (PWR): 通電中。点きっぱなしで正常
@@ -403,11 +420,33 @@ ssh workshop@10.x.x.1NN
 - 接続できたら:
 
 ```
-hostname        # pi-NN と出るはず
-ip a            # 自分の IP を確認
+hostname        # クローン直後は全台 pi-00 と出ます (正常)
+ip a            # 自分の IP を確認 — こちらは席番号どおり
 ```
 
-うまくいかない場合はこの後の救済タイムで対応します。
+- IP が席番号どおりになるのは、ルーターが **Pi 本体の MAC アドレス**に
+  IP を固定しているからです。SD カードの中身には依存しません
+- hostname はこの後の「個体化」で直します。
+  うまくいかない場合は救済タイムで対応します。
+
+---
+
+## 個体化 / Make it yours
+
+全員のカードは同じイメージのクローンなので、名前を自分の席番号にします。
+Every card is a clone — time to give yours its own identity.
+
+```
+sudo /opt/scripts/personalize-sd.sh NN   # NN = あなたの席番号 (01–15)
+sudo reboot
+```
+
+- 1〜2 分待って SSH し直し、`hostname` が `pi-NN` になったのを確認
+- このスクリプトがやっていること:
+  - hostname を pi-NN に変更
+  - 第三部で使う AP の SSID (foss4g-pi-NN) とチャンネルを席番号で設定
+- **これをやらないと第三部で全員の AP が同名・同チャンネルで衝突します。**
+  必ずここで済ませてください
 
 ---
 
