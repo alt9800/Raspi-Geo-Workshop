@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serving Map Tiles from a Raspberry Pi — FOSS4G Hiroshima 2026</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #f5f5f2;
+            color: #222;
+        }
+        .site-header {
+            background: #2d4a3e;
+            padding: 32px 24px;
+            text-align: center;
+            color: #fff;
+        }
+        .site-header h1 { font-size: 1.3rem; font-weight: 600; line-height: 1.5; }
+        .site-header .sub { font-size: 0.85rem; color: #c8d8d0; margin-top: 6px; }
+        .container { max-width: 720px; margin: 0 auto; padding: 24px 16px; }
+        .section {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-left: 4px solid #2d4a3e;
+            border-radius: 6px;
+            padding: 16px 18px;
+            margin: 12px 0;
+        }
+        .section h2 { font-size: 0.95rem; margin-bottom: 10px; }
+        .links { display: flex; gap: 8px; flex-wrap: wrap; }
+        .links a {
+            display: inline-block;
+            padding: 6px 14px;
+            background: #2d4a3e;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        .links a:hover { background: #3d5f50; }
+        .links a.pdf { background: #8a3b2e; }
+        .links a.pdf:hover { background: #7a3428; }
+        .links a.sub { background: #4a6a7a; }
+        .links a.sub:hover { background: #3d5a68; }
+        .note { font-size: 0.8rem; color: #666; margin-top: 8px; line-height: 1.6; }
+        .attrib { font-size: 0.72rem; color: #888; margin-top: 24px; line-height: 1.7; padding-bottom: 16px; }
+    </style>
+</head>
+<body>
+    <div class="site-header">
+        <h1>Serving Map Tiles from a Raspberry Pi<br>A Portable Tile Server Workshop</h1>
+        <div class="sub">FOSS4G Hiroshima 2026 / 2026-08-30 14:00–17:00 / Room 610</div>
+    </div>
+    <div class="container">
+        <div class="section">
+            <h2>スライド / Slides</h2>
+            <div class="links">
+                <a href="slide">テキスト (HTML)</a>
+                <a href="slide.pdf" class="pdf">スライド (PDF)</a>
+                <a href="slide.en">Text (EN)</a>
+                <a href="slide.en.pdf" class="pdf">Slides (EN, PDF)</a>
+            </div>
+            <div class="note">第三部はオフラインで進行します。開始時に PDF をダウンロードしておいてください。<br>
+            Part 3 runs offline — please download the PDF at the start.</div>
+        </div>
+        <div class="section">
+            <h2>資料 / Materials</h2>
+            <div class="links">
+                <a href="glossary" class="sub">用語対訳表 / Glossary</a>
+                <a href="flash-guide" class="sub">SD焼き手順 / Flash guide</a>
+                <a href="timetable" class="sub">進行表</a>
+                <a href="timetable.en" class="sub">Timetable (EN)</a>
+                <a href="instructor-notes" class="sub">講師ノート</a>
+                <a href="instructor-notes.en" class="sub">Instructor notes (EN)</a>
+                <a href="setup-notes" class="sub">セットアップ実録</a>
+                <a href="setup-notes.en" class="sub">Setup notes (EN)</a>
+            </div>
+        </div>
+        <div class="attrib">
+            © OpenMapTiles © OpenStreetMap contributors /
+            「指定緊急避難場所データ」(国土地理院)・「基盤地図情報 数値標高モデル」(国土地理院)・
+            「国土数値情報 (洪水浸水想定区域・土砂災害警戒区域)」(国土交通省) をもとに作成
+        </div>
+<div class="attrib">最終更新: 2026年08月30日 15:37 (JST)</div>
+</div></body></html>

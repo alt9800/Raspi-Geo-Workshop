@@ -1,0 +1,11 @@
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-relative-links
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
